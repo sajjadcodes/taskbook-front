@@ -124,17 +124,17 @@ const getTaskList = ( listRoute ) => {
 	loader.style.display = 'block';
 
     // Fetch the 10 latest tasks.
-    fetch(listRoute, {
+    fetch( listRoute, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer' + sessionStorage.getItem(config.tokenName),
+            'Authorization': 'Bearer ' + sessionStorage.getItem( config.tokenName )
         }
-    } )
-    .then(reponse => Response.json())
-    .then(taskObjectList =>createTaskList(taskObjectList))
+    })
+    .then( response => response.json() )
+    .then( taskObjectList => createTaskList( taskObjectList ) )
     .catch( (error) => {
-        console.error('Fetch error: ', error);
+        console.error( 'Fetch error: ', error );
         loader.style.display = 'none';
     })
 

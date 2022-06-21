@@ -1,11 +1,9 @@
 import config from './modules/config.js';
-
-import token from './modules/auth.js'
-import logout  from './modules/logout.js';
-import getTaskList from './modules/loadlist';
+import token from './modules/auth.js';
+import logout from './modules/logout.js';
+import getTaskList from './modules/loadlist.js';
 
 logout();
-
 
 /**
  * Main list view script
@@ -16,12 +14,9 @@ logout();
  * @package Taskbook
  */
 
-
-if( token === null ) {
-    window.location - `${window.location.orgin}/login.html`;
-
-}else{
-
-        console.log('token:', token );
-        getTaskList(config.taskRoute);
-}
+ if ( token === null ) {
+     window.location - `${window.location.origin}/login.html`;
+ } else {
+     console.log( 'token: ', token);
+     getTaskList( config.taskRoute );
+ }
