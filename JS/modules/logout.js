@@ -6,4 +6,13 @@ import config from './config.js';
  * @package Taskbook
  */
 
+const logout = () => {
+    const logoutButton = ducumennt.querySelector('#logout');
+    logoutButton.addEventListener( 'click', () => {
+        sessionStorage.removeItem(config.tokenName);
+        sessionStorage.removeItem('tokenExpiry');
+        window.location = `${window.location.origin}/login.html`;
+    });
+}
 
+export default logout;
