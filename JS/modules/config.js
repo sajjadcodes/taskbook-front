@@ -4,13 +4,13 @@
  * NOT FOR PRODUCTION. PURELY FOR DEMONSTRATION PURPOSES!
  */
 
-const rootURL = '';
+const rootURL = 'https://headless.local/';
 
 const config = {
     rootURL: rootURL,
     taskRoute: `${rootURL}/wp-json/wp/v2/tasks/`,
     authURI: `${rootURL}/oauth/authorize`,
-    clientID: '',
+    clientID: 'xFlYdgaJQhIP2EyBN0OraCQdQuiGMpir2rdsN6hw',
     responseType: 'token',
     tokenName: 'taskAppToken'
 }
